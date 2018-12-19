@@ -3,23 +3,20 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const login = r => require.ensure([], () => r(require('@/page/login')), 'login');
-const manage = r => require.ensure([], () => r(require('@/page/manage')), 'manage');
-const home = r => require.ensure([], () => r(require('@/page/home')), 'home');
-const addShop = r => require.ensure([], () => r(require('@/page/addShop')), 'addShop');
-const addGoods = r => require.ensure([], () => r(require('@/page/addGoods')), 'addGoods');
-const userList = r => require.ensure([], () => r(require('@/page/userList')), 'userList');
-const shopList = r => require.ensure([], () => r(require('@/page/shopList')), 'shopList');
-const foodList = r => require.ensure([], () => r(require('@/page/foodList')), 'foodList');
-const orderList = r => require.ensure([], () => r(require('@/page/orderList')), 'orderList');
-const adminList = r => require.ensure([], () => r(require('@/page/adminList')), 'adminList');
-const visitor = r => require.ensure([], () => r(require('@/page/visitor')), 'visitor');
-const newMember = r => require.ensure([], () => r(require('@/page/newMember')), 'newMember');
-const uploadImg = r => require.ensure([], () => r(require('@/page/uploadImg')), 'uploadImg');
-const vueEdit = r => require.ensure([], () => r(require('@/page/vueEdit')), 'vueEdit');
-const adminSet = r => require.ensure([], () => r(require('@/page/adminSet')), 'adminSet');
-const sendMessage = r => require.ensure([], () => r(require('@/page/sendMessage')), 'sendMessage');
-const explain = r => require.ensure([], () => r(require('@/page/explain')), 'explain');
+const login = r => require.ensure([], () => r(require('@/page/login')), 'login');                             //登录页面
+const manage = r => require.ensure([], () => r(require('@/page/manage')), 'manage');                          //左侧管理菜单
+const home = r => require.ensure([], () => r(require('@/page/home')), 'home');                                //主页
+const gameList = r => require.ensure([], () => r(require('@/page/gameList')), 'gameList');                    //游戏列表
+const addGame = r => require.ensure([], () => r(require('@/page/addGame')), 'addGame');                       //添加游戏
+const userList = r => require.ensure([], () => r(require('@/page/userList')), 'userList');                    //用户权限列表
+const orderList = r => require.ensure([], () => r(require('@/page/orderList')), 'orderList');                 //订单查询
+const callbackDebug= r => require.ensure([], () => r(require('@/page/callbackDebug')), 'callbackDebug');      //调试支付回调接口
+const callbackSet = r => require.ensure([], () => r(require('@/page/callbackSet')), 'callbackSet');           //调试回调地址
+const loginDebug = r => require.ensure([], () => r(require('@/page/loginDebug')), 'loginDebug');              //调试登录接口
+const explain = r => require.ensure([], () => r(require('@/page/explain')), 'explain');                       //说明
+
+
+
 
 const routes = [
 	{
@@ -35,57 +32,33 @@ const routes = [
 			component: home,
 			meta: [],
 		},{
-			path: '/addShop',
-			component: addShop,
-			meta: ['添加数据', '添加商铺'],
+			path: '/addGame',
+			component: addGame,
+			meta: ['添加游戏'],
 		},{
-			path: '/addGoods',
-			component: addGoods,
-			meta: ['添加数据', '添加商品'],
+			path: '/gameList',
+			component: gameList,
+			meta: ['游戏列表'],
 		},{
-			path: '/userList',
-			component: userList,
-			meta: ['数据管理', '用户列表'],
+			path: '/callbackSet',
+			component: callbackSet,
+			meta: ['游戏管理', '配置回调地址'],
 		},{
-			path: '/shopList',
-			component: shopList,
-			meta: ['数据管理', '商家列表'],
+			path: '/callbackDebug',
+			component: callbackDebug,
+			meta: ['游戏管理', '调试支付回调接口'],
 		},{
-			path: '/foodList',
-			component: foodList,
-			meta: ['数据管理', '食品列表'],
+			path: '/loginDebug',
+			component: loginDebug,
+			meta: ['游戏管理', '调试登录接口'],
 		},{
 			path: '/orderList',
 			component: orderList,
-			meta: ['数据管理', '订单列表'],
+			meta: ['游戏管理', '订单列表'],
 		},{
-			path: '/adminList',
-			component: adminList,
-			meta: ['数据管理', '管理员列表'],
-		},{
-			path: '/visitor',
-			component: visitor,
-			meta: ['图表', '用户分布'],
-		},{
-			path: '/newMember',
-			component: newMember,
-			meta: ['图表', '用户数据'],
-		},{
-			path: '/uploadImg',
-			component: uploadImg,
-			meta: ['文本编辑', 'MarkDown'],
-		},{
-			path: '/vueEdit',
-			component: vueEdit,
-			meta: ['编辑', '文本编辑'],
-		},{
-			path: '/adminSet',
-			component: adminSet,
-			meta: ['设置', '管理员设置'],
-		},{
-			path: '/sendMessage',
-			component: sendMessage,
-			meta: ['设置', '发送通知'],
+			path: '/userList',
+			component: userList,
+			meta: ['设置', '用户权限设置'],
 		},{
 			path: '/explain',
 			component: explain,

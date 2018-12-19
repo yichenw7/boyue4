@@ -1,7 +1,7 @@
 <template>
     <div>
         <head-top></head-top>
-		<section class="data_section">
+		<!-- <section class="data_section">
 			<header class="section_title">数据统计</header>
 			<el-row :gutter="20" style="margin-bottom: 10px;">
                 <el-col :span="4"><div class="data_list today_head"><span class="data_num head">当日数据：</span></div></el-col>
@@ -16,7 +16,7 @@
                 <el-col :span="4"><div class="data_list"><span class="data_num">{{allAdminCount}}</span> 管理员</div></el-col>
             </el-row>
 		</section>
-		<tendency :sevenDate='sevenDate' :sevenDay='sevenDay'></tendency>
+		<tendency :sevenDate='sevenDate' :sevenDay='sevenDay'></tendency> -->
     </div>
 </template>
 
