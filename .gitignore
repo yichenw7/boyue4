@@ -9,3 +9,7 @@ test/e2e/reports
 selenium-debug.log
 package-lock.json
 .DS_Store
+manage/static/js/manifest.2d6d76f28b2f20bc09cc.js
+manage/static/js/app.0d480ac00ab09a2bb1ca.js
+.idea/workspace.xml
+.idea/vcs.xml
